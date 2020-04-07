@@ -57,19 +57,19 @@ namespace DSC.Actor.Behaviour2D
 
         public override void OnStartBehaviour(BaseActorController hBaseController)
         {
-            if (hBaseController.TryGetActorData(out BaseActorData2D_Player hActorData)
+            if (hBaseController.TryGetIActorData(out IActorData_Input hDataInput)
                 && hBaseController.TryGetBehaviourData(out DoubleJumpCacheData hOutData))
             {
-                hActorData.m_hInputButtonCallback.Add((m_eButton, GetInputType.Down), hOutData.m_actJump);
+                hDataInput.inputButtonCallback.Add((m_eButton, GetInputType.Down), hOutData.m_actJump);
             }
         }
 
         public override void OnStopBehaviour(BaseActorController hBaseController)
         {
-            if (hBaseController.TryGetActorData(out BaseActorData2D_Player hActorData)
+            if (hBaseController.TryGetIActorData(out IActorData_Input hDataInput)
                 && hBaseController.TryGetBehaviourData(out DoubleJumpCacheData hOutData))
             {
-                hActorData.m_hInputButtonCallback.Remove((m_eButton, GetInputType.Down), hOutData.m_actJump);
+                hDataInput.inputButtonCallback.Remove((m_eButton, GetInputType.Down), hOutData.m_actJump);
             }
         }
 
@@ -102,7 +102,7 @@ namespace DSC.Actor.Behaviour2D
             if (hBaseController.isTimeStop || !PassCondition(hBaseController))
                 return;
 
-            if (!hBaseController.TryGetActorData(out BaseActorData2D_Player hActorData)
+            if (!hBaseController.TryGetActorData(out BaseActorData2D hActorData)
                 || !hBaseController.TryGetBehaviourData(out DoubleJumpCacheData hOutData) || !hOutData.m_bCanDoubleJump)
                 return;
 

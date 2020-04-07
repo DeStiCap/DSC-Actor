@@ -65,21 +65,21 @@ namespace DSC.Actor.Behaviour2D
         {
             base.OnStartBehaviour(hBaseController);
 
-            if (hBaseController.TryGetActorData(out BaseActorData2D_Player hActorData)
+            if (hBaseController.TryGetIActorData(out IActorData_Input hDataInput)
                 && hBaseController.TryGetBehaviourData(out GravityIncreaseButtonCacheData hOutData))
             {
-                hActorData.m_hInputButtonCallback.Add((m_eStopButton, GetInputType.Down), hOutData.m_actButtonDown, EventOrder.Late);
-                hActorData.m_hInputButtonCallback.Add((m_eStopButton, GetInputType.Up), hOutData.m_actButtonUp);
+                hDataInput.inputButtonCallback.Add((m_eStopButton, GetInputType.Down), hOutData.m_actButtonDown, EventOrder.Late);
+                hDataInput.inputButtonCallback.Add((m_eStopButton, GetInputType.Up), hOutData.m_actButtonUp);
             }
         }
 
         public override void OnStopBehaviour(BaseActorController hBaseController)
         {
-            if (hBaseController.TryGetActorData(out BaseActorData2D_Player hActorData)
+            if (hBaseController.TryGetIActorData(out IActorData_Input hDataInput)
                 && hBaseController.TryGetBehaviourData(out GravityIncreaseButtonCacheData hOutData))
             {
-                hActorData.m_hInputButtonCallback.Remove((m_eStopButton, GetInputType.Down), hOutData.m_actButtonDown, EventOrder.Late);
-                hActorData.m_hInputButtonCallback.Remove((m_eStopButton, GetInputType.Up), hOutData.m_actButtonUp);
+                hDataInput.inputButtonCallback.Remove((m_eStopButton, GetInputType.Down), hOutData.m_actButtonDown, EventOrder.Late);
+                hDataInput.inputButtonCallback.Remove((m_eStopButton, GetInputType.Up), hOutData.m_actButtonUp);
 
                 hOutData.m_bStoping = false;
             }

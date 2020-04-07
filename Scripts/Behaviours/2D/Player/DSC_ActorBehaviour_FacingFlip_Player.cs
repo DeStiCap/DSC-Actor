@@ -24,7 +24,7 @@ namespace DSC.Actor.Behaviour2D
         {
             var hInput = hBaseController.baseActorInput;
 
-            if (!hBaseController.TryGetActorData(out BaseActorData2D_Player hActorData)
+            if (!hBaseController.TryGetActorData(out BaseActorData2D hActorData)
                 || hInput == null || !PassCondition(hBaseController))
                 return;
 

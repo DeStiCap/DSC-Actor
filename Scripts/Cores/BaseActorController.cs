@@ -56,6 +56,14 @@ namespace DSC.Actor
             {
                 baseActorData = (BaseActorData) ScriptableObject.CreateInstance(actorDataBlueprint.GetType());
                 baseActorData.Init(transform);
+
+                if (baseActorInput)
+                {
+                    if (TryGetIActorData(out IActorData_Input hDataInput))
+                    {
+                        hDataInput.InitInput(baseActorInput);
+                    }
+                }
             }
         }
 
@@ -87,6 +95,31 @@ namespace DSC.Actor
         public bool TryGetActorData<T>(out T hOutData) where T : BaseActorData
         {
             hOutData = GetActorData<T>();
+            return hOutData != null;
+        }
+
+        /// <summary>
+        /// Get IActorData.
+        /// </summary>
+        /// <typeparam name="T">IActorData type</typeparam>
+        /// <returns>IActorData</returns>
+        public T GetIActorData<T>() where T : class, IActorData
+        {
+            if (!baseActorData is T)
+                return null;
+
+            return baseActorData as T;
+        }
+
+        /// <summary>
+        /// Try get IActorData.
+        /// </summary>
+        /// <typeparam name="T">IActorData type</typeparam>
+        /// <param name="hOutData">IActorData</param>
+        /// <returns>True if get success</returns>
+        public bool TryGetIActorData<T>(out T hOutData) where T : class, IActorData
+        {
+            hOutData = GetIActorData<T>();
             return hOutData != null;
         }
 

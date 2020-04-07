@@ -1,4 +1,7 @@
-## [0.3.1-preivew.1] - 2019-04-07
+## [0.3.1-preivew.2] - 2019-04-07
+- Add IActorData interface.
+- Add IActorData_Input interface.
+- Change flow from use input from ActorData directly to use from IActorData_Input instead.
 - Transfer DSC Actor Controller to package.
 - Remove BaseActorController generic.
 

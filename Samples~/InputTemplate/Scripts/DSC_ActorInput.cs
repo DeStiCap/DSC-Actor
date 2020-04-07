@@ -68,10 +68,7 @@ namespace DSC.Template.Actor.Input
         {
             m_hInput = GetComponent<PlayerInput>();
             InitInputAction();
-        }
 
-        protected virtual void Start()
-        {
             m_hBaseActor.RegisterBaseInput(this);
         }
 

@@ -161,7 +161,10 @@ namespace DSC.Actor
         {
             base.RegisterBaseInput(hBaseInput);
 
-            m_hBaseData.m_hInput = hBaseInput;
+            if(TryGetIActorData(out IActorData_Input hDataInput))
+            {
+                hDataInput.InitInput(hBaseInput);
+            }
         }
 
         #endregion
@@ -180,7 +183,10 @@ namespace DSC.Actor
 
         protected override void OnRunEventInput(InputButtonType eButtonType, GetInputType eGetType)
         {
-            m_hBaseData.m_hInputButtonCallback.Run((eButtonType, eGetType), this);
+            if (!TryGetIActorData(out IActorData_Input hDataInput))
+                return;
+
+            hDataInput.inputButtonCallback.Run((eButtonType, eGetType), this);
         }
 
         #endregion
