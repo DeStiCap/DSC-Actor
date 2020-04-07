@@ -56,6 +56,7 @@ namespace DSC.Template.Actor.SideScrolling2D
         #endregion
 
         protected DSC_ActorController m_hActorControler;
+        protected BaseActorStatus m_hBaseActorStatus;
 
         protected EventCallback<DamageableEvent,DamageData> m_hDamageableEvent = new EventCallback<DamageableEvent, DamageData>();
 
@@ -71,6 +72,7 @@ namespace DSC.Template.Actor.SideScrolling2D
         protected virtual void Awake()
         {
             m_hActorControler = GetComponent<DSC_ActorController>();
+            m_hBaseActorStatus = GetComponent<BaseActorStatus>();
         }
 
         #endregion
@@ -152,10 +154,9 @@ namespace DSC.Template.Actor.SideScrolling2D
 
         protected virtual bool MainTakeDamage(DamageData hData)
         {
-            if (baseActorData == null || !(baseActorData is ActorData))
+            if (!m_hActorControler.TryGetActorData(out ActorData hActorData)
+                || !m_hBaseActorStatus.TryGetStatusData(out ActorStatus hStatusData))
                 return false;
-
-            var hActorData = (ActorData)baseActorData;
 
             // Ignore damage during IFrame.
             if (FlagUtility.HasFlagUnsafe(hActorData.m_eStateFlag, ActorStateFlag.IFrame)
@@ -165,9 +166,8 @@ namespace DSC.Template.Actor.SideScrolling2D
             }
 
             int nDamage = hData.m_nDamage;
-            var hStatus = hActorData.m_hStatus;
- 
-            if (nDamage <= 0 || hStatus == null)
+
+            if (nDamage <= 0 || hStatusData == null)
             {
                 //StartDamageBehaviour(hData.m_arrBehaviour);
                 return false;
@@ -177,12 +177,12 @@ namespace DSC.Template.Actor.SideScrolling2D
 
             m_hActorControler.InterruptAllBehaviour();
 
-            var nCurrentHp = hStatus.status.m_nCurrentHp;
+            var nCurrentHp = hStatusData.m_nCurrentHp;
             nCurrentHp -= nDamage;
             if (nCurrentHp < 0)
                 nCurrentHp = 0;
 
-            hStatus.status.m_nCurrentHp = nCurrentHp;
+            hStatusData.m_nCurrentHp = nCurrentHp;
 
             if (nCurrentHp == 0)
                 Dead(hData);

@@ -7,7 +7,7 @@ using DSC.Event;
 
 namespace DSC.Template.Actor.SideScrolling2D
 {
-    [CreateAssetMenu(fileName = "ActorDataBlueprint", menuName = "DSC/Actor/Data/Blueprint/Actor Data")]
+    [CreateAssetMenu(fileName = "ActorDataBlueprint", menuName = "DSC/Actor/Data/Blueprint/2D SideScrolling/Actor Data")]
     public class ActorData : BaseActorData2D, IActorData_Input
     {
         #region Variable

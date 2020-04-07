@@ -1,9 +1,12 @@
-## [0.3.1-preivew.2] - 2019-04-07
+## [0.3.1-preivew.3] - 2019-04-07
 - Add IActorData interface.
 - Add IActorData_Input interface.
 - Change flow from use input from ActorData directly to use from IActorData_Input instead.
+- Change Status Data to derived from ScriptableObject.
 - Transfer DSC Actor Controller to package.
+- Transfer DSC Actor Status to package.
 - Remove BaseActorController generic.
+- Remove BaseActorStatus generic.
 
 ## [0.3.0-preivew.1] - 2019-03-20
 - Change all actor behaviour system to new one.

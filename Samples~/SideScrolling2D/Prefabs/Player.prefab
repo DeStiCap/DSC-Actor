@@ -100,6 +100,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 7461487779414a842bf94a7a3f46d7fc,
         type: 2}
+    - target: {fileID: 7227808495351946334, guid: 23c5c1bed7350a842a8742a4558ac13f,
+        type: 3}
+      propertyPath: m_hStatusBlueprint
+      value: 
+      objectReference: {fileID: 11400000, guid: c39a985adc02d9a4895b4edf67a0283c,
+        type: 2}
     - target: {fileID: 8949200934325584783, guid: 23c5c1bed7350a842a8742a4558ac13f,
         type: 3}
       propertyPath: m_Name

@@ -489,14 +489,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8949200934325584783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f21ba75715e482408681788fd6c4ec4, type: 3}
+  m_Script: {fileID: 11500000, guid: b83a4cdf1d7020e48a27bea7ad2b31c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_hStatus:
-    m_nMaxHp: 10
-    m_nCurrentHp: 0
-    m_fMoveSpeed: 10
-    m_fJumpForce: 10
+  m_hStatusBlueprint: {fileID: 0}
+  m_hStatus: {fileID: 0}
 --- !u!114 &7903352619579212976
 MonoBehaviour:
   m_ObjectHideFlags: 0
