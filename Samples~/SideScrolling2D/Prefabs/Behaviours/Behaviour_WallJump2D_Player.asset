@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1890d305d047f4e83621a84b496a90, type: 3}
+  m_Name: Behaviour_WallJump2D_Player
+  m_EditorClassIdentifier: 
+  m_arrCondition:
+  - {fileID: 11400000, guid: eea17eb138615274491a53369391ed74, type: 2}
+  - {fileID: 11400000, guid: 13b78dd264d4df54ab8214843dcca0ae, type: 2}
+  - {fileID: 11400000, guid: 84459cd34990f4c4ab994cf443a744c9, type: 2}
+  m_eButton: 32
+  m_fForceX: 10
+  m_hForceXValue: {fileID: 0}
+  m_fForceY: 10
+  m_hForceYValue: {fileID: 0}
+  m_fLockFlagDuration: 0.15
+  m_arrJumpEvent:
+  - {fileID: 11400000, guid: 21c56d2a665276d4cbe3091551b876a2, type: 2}
+  - {fileID: 11400000, guid: 4f8083304cd57b54f8977d1749c29451, type: 2}
+  m_arrJumpEndEvent:
+  - {fileID: 11400000, guid: 543e7cd7cc3333e429fd384d1ca5d79a, type: 2}

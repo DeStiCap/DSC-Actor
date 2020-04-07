@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c6b99c085e9e340a508b1d79d4c59c, type: 3}
+  m_Name: Behaviour_Walk2D_Player
+  m_EditorClassIdentifier: 
+  m_arrCondition:
+  - {fileID: 11400000, guid: b734093b63e8e42478779d1ea9704bcf, type: 2}
+  - {fileID: 11400000, guid: a41501e781eff9847bfc6bf555ab7a76, type: 2}
+  m_fWalkSpeed: 10
+  m_hWalkSpeedValue: {fileID: 0}
+  m_eCanMoveDirection: 12
+  m_bOnlyOneDirection: 0
+  m_arrOnWalkingEvent:
+  - {fileID: 11400000, guid: 4d80e7955cc29ed428c326cd9a239df4, type: 2}

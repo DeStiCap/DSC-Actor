@@ -1,0 +1,16 @@
+{
+    "name": "DSC.Actor.Behaviour.Condition",
+    "references": [
+        "GUID:54c50ca3303c7394f81c248a6f2a76c0",
+        "GUID:acff8e849db7dec488c770445e10185e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

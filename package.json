@@ -1,0 +1,36 @@
+{
+    "name": "com.dsc.actor",
+    "author": "DeStiCap",
+    "displayName": "DSC Actor",
+    "version": "0.3.1-preview.1",
+    "unity": "2019.3",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DeStiCap/DSC-Actor.git",
+        "revision": "dbb1bc048f1a3e3371d1512c960b96c5736dbc80"
+    },
+	"description": "Actor system for unity.",
+    "keywords": [
+        "Actor"
+    ],   
+	"dependencies": {
+		"com.unity.inputsystem": "1.0.0-preview.6"
+	},
+    "samples": [
+        {
+            "displayName": "Actor Template",
+            "description": "Template for actor system.",
+            "path": "Samples~/ActorTemplate"
+        },
+        {
+            "displayName": "SideScrolling2D Template",
+            "description": "Template for side scrolling 2D game.",
+            "path": "Samples~/SideScrolling2D"
+        },
+        {
+            "displayName": "Input Template",
+            "description": "Input Template for Actor System.",
+            "path": "Samples~/InputTemplate"
+        }
+    ]
+}
