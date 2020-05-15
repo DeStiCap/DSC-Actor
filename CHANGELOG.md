@@ -1,3 +1,6 @@
+## [0.3.2-preivew.1] - 2019-05-15
+- Change dependency Input System to version 1.0.0
+
 ## [0.3.1-preivew.3] - 2019-04-07
 - Add IActorData interface.
 - Add IActorData_Input interface.
