@@ -2,19 +2,19 @@
     "name": "com.dsc.actor",
     "author": "DeStiCap",
     "displayName": "DSC Actor",
-    "version": "0.3.2-preview.1",
-    "unity": "2019.3",
+    "version": "0.4.0-preview.1",
+    "unity": "2020.3",
     "repository": {
         "type": "git",
         "url": "https://github.com/DeStiCap/DSC-Actor.git",
-        "revision": "dbb1bc048f1a3e3371d1512c960b96c5736dbc80"
+        "revision": "eef16191fe4030151582dfbc24c7bea0073adcda"
     },
 	"description": "Actor system for unity.",
     "keywords": [
         "Actor"
     ],   
 	"dependencies": {
-		"com.unity.inputsystem": "1.0.0"
+		"com.unity.inputsystem": "1.0.2"
 	},
     "samples": [
         {

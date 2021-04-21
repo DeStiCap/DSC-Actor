@@ -1,3 +1,8 @@
+## [0.4.0-preivew.1] - 2021-04-21
+- Change minimum Unity version requirement to 2020.3
+- Change dependency Input System to version 1.0.2
+- Fix error when use with DSC-Event V0.4.2-preview.1
+
 ## [0.3.2-preivew.1] - 2019-05-15
 - Change dependency Input System to version 1.0.0
 

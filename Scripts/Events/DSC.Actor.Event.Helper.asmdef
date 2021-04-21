@@ -1,5 +1,6 @@
 {
     "name": "DSC.Actor.Event.Helper",
+    "rootNamespace": "DSC.Actor.Event.Helper",
     "references": [
         "GUID:54c50ca3303c7394f81c248a6f2a76c0"
     ],

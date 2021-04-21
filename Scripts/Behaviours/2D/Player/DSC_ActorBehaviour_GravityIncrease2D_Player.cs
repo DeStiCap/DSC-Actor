@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using DSC.Core;
+using DSC.Event;
 
 namespace DSC.Actor.Behaviour2D
 {
